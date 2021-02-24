@@ -29,4 +29,11 @@
             app:enterAnim="@anim/fragment_fade_enter"
             app:exitAnim="@anim/fragment_fade_exit" />
     </fragment>
+
+    <fragment>
+        android:id="@+id/ThirdFragment"
+        android:name="com.example.windows.ThirdFragment"
+        android:label="@string/third_fragment_label"
+        tools:layout="@layout/fragment_third">
+    </fragment>
 </navigation>
