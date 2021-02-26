@@ -16,7 +16,13 @@
             app:destination="@id/SecondFragment"
             app:enterAnim="@anim/fragment_fade_enter"
             app:exitAnim="@anim/fragment_fade_exit" />
+        <action
+            android:id="@+id/action_FirstFragment_to_ThirdFragment"
+            app:destination="@id/ThirdFragment"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit" />
     </fragment>
+
     <fragment
         android:id="@+id/SecondFragment"
         android:name="com.example.windows.SecondFragment"
@@ -28,12 +34,43 @@
             app:destination="@id/FirstFragment"
             app:enterAnim="@anim/fragment_fade_enter"
             app:exitAnim="@anim/fragment_fade_exit" />
+        <action
+            android:id="@+id/action_SecondFragment_to_Failure"
+            app:destination="@id/Failure"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit" />
     </fragment>
 
-    <fragment>
+    <fragment
         android:id="@+id/ThirdFragment"
         android:name="com.example.windows.ThirdFragment"
-        android:label="@string/third_fragment_label"
-        tools:layout="@layout/fragment_third">
+        android:label="third_fragment_label"
+        tools:layout="@layout/fragment_three">
+
+        <action
+            android:id="@+id/action_ThirdFragment_to_Courses"
+            app:destination="@id/Courses"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit" />
+
+        <action
+            android:id="@+id/action_ThirdFragment_to_FirstFragment"
+            app:destination="@+id/FirstFragment"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/Courses"
+        android:name="com.example.windows.Courses"
+        android:label="courses_fragment_label"
+        tools:layout="@layout/fragment_courses_list">
+    </fragment>
+
+    <fragment
+        android:id="@+id/Failure"
+        android:name="com.example.windows.EnjoyFailing"
+        android:label="courses_fragment_label"
+        tools:layout="@layout/fragment_enjoy_failing">
     </fragment>
 </navigation>
